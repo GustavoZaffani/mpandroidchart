@@ -4,7 +4,7 @@ import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.utfpr.trabalhofinalapi.R
-import br.edu.utfpr.trabalhofinalapi.formatters.PieFormatter
+import br.edu.utfpr.trabalhofinalapi.formatters.CurrencyFormatter
 import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.components.Description
 import com.github.mikephil.charting.components.Legend
@@ -31,7 +31,7 @@ class PieChartActivity : AppCompatActivity() {
         pieDataSet.setColors(ColorTemplate.MATERIAL_COLORS, 255)
         pieDataSet.valueTextColor = Color.BLACK
         pieDataSet.valueTextSize = 18f
-        pieDataSet.valueFormatter = PieFormatter()
+        pieDataSet.valueFormatter = CurrencyFormatter()
         pieDataSet.label = ""
 
         pieChart.data = PieData(pieDataSet)

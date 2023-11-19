@@ -3,7 +3,7 @@ package br.edu.utfpr.trabalhofinalapi.activities
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.utfpr.trabalhofinalapi.R
-import br.edu.utfpr.trabalhofinalapi.formatters.BarFormatter
+import br.edu.utfpr.trabalhofinalapi.formatters.WeekFormatter
 import com.github.mikephil.charting.charts.BarChart
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.BarData
@@ -41,7 +41,7 @@ class BarChartActivity : AppCompatActivity() {
     }
 
     private fun buildXAxis(xAxis: XAxis) {
-        xAxis.valueFormatter = BarFormatter()
+        xAxis.valueFormatter = WeekFormatter()
         xAxis.position = XAxis.XAxisPosition.BOTTOM
         xAxis.textSize = 12f
     }
